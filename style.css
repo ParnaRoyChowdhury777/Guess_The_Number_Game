@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
+:root{
+    --main-color : #0c154e;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,10 +11,7 @@
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
     letter-spacing: 2px;
-}
-
-:root{
-    --main-color : #0c154e;
+    color: var(--main-color);
 }
 
 body{
@@ -23,7 +24,6 @@ body{
 h1{
     font-weight: 700;
     font-size: 2.5rem;
-    color: var(--main-color);
     margin-top: 1.8 rem;
 }
 
@@ -37,7 +37,7 @@ h1{
 #round_text{
     margin-bottom: 2rem;
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -60,10 +60,35 @@ h1{
     display: block;
     border: none;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     margin-left: 12rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all 1s;
+    background-color: bisque;
+    font-weight: 700;
 }
+
+#go:hover{
+    box-shadow: 0px 0px 10px red;
+    height: 5rem;
+    width: 5rem;
+    background-color: red;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+
+
+#home{
+    display: block;
+}
+
+#game{
+    display: none;
+}
+
 .container h3{
     text-align: center;
     margin-bottom: 1.5rem;
@@ -103,7 +128,6 @@ footer{
     bottom: 0;
     width: 100%;
     font-size: 1.2rem;
-    color: var(--main-color);
     font-weight: 600;
     text-align: center;
 }

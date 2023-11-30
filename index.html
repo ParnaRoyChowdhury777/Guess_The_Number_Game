@@ -10,16 +10,21 @@
 </head>
 
 <body>
-    
+
     <h1><marquee direction="left">Welcome to Guess The Number Game!!</marquee></h1>
     <div class="container">
-        <span id="round_text">Choose the number of rounds :</span>
+        <p id="round_text">Choose the number of rounds :</p>
         <input type="number" name="rounds" id="rounds" max="25" min="5" placeholder="No. of rounds">
+        <button id="go" onclick="show()">Go</button>
+        <div class="game">
         <h3>Guess a number between 1 and 100 : </h3>
-        <input type="text" name="text" id="try_guess">
-        <button type="submit" id="submit">Submit</button>
-        <button type="reset" id="reset">New Game</button>
+        <input type="text" name="text" id="try_guess" placeholder="Enter here">
+        <div class="buttons">
+            <button type="submit" id="submit">Submit</button>
+            <button type="reset" id="reset">New Game</button>
+        </div>
         <div class="input_area"></div>
+        </div>
     </div>
 
     <footer>

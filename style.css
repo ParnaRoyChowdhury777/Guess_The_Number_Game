@@ -6,6 +6,11 @@
     outline: none;
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
+}
+
+:root{
+    --main-color : #0c154e;
 }
 
 body{
@@ -15,3 +20,95 @@ body{
     background-size: cover;
 }
 
+h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-top: 1.8 rem;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#round_text{
+    margin-bottom: 2rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#rounds{
+    height: 2rem;
+    width: 4rem;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+
+#rounds:active, #rounds:focus{
+    border: 2px solid green;
+}
+
+#go{
+    display: block;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 12rem;
+}
+.container h3{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#try_guess{
+    width: 12rem;
+    height: 2.5rem;
+    margin-left: 7rem;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.buttons{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1rem;
+}
+
+#submit, #reset{
+    border: none;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#reset{
+    margin-left: 2rem;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--main-color);
+}

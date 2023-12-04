@@ -15,15 +15,16 @@
 }
 
 body{
-    background-color: #fdfffc; 
+    background-color: #f2f2f2; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-h1{
+.heading{
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .container{
@@ -31,10 +32,32 @@ h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #f2f3f7;
+    border-radius: 40px;
+    box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(0, 0, 0, .25);
+    height: 80vh;
+    margin-top: 1.5rem;
+    border: 2px solid rgba(118,174,241,1);
+}
+
+#bgm-mute{
+  display: none;
+}
+
+.bgm{
+  font-size: 1.5rem;
+  margin-left: 45%;
+  margin-top: 2rem;
+  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 #round_text{
-    margin-bottom: 2rem;
+    padding: 2rem;
+    padding-top: 10rem;
     display: inline-block;
     font-size: 2rem;
     font-weight: 600;
@@ -47,106 +70,117 @@ h1{
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-left: 1rem;
+    margin-left: 14.7rem;
+    display: block;
+    border-color: var(--main-color);
 }
 
 #rounds:active, #rounds:focus{
     border: 2px solid green;
 }
 
-#go{
-    display: block;
-    transform: translateX(12rem);
-    position: relative;
-    padding: 10px 22px;
-    border-radius: 6px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    background-color: var(--main-color);
-    transition: all 0.2s ease;
-    font-size: 1.5rem;
+#go {
+  margin: 20px;
+}
+#go {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  margin-left: 12.5rem;
+  margin-top: 2rem;
 }
 
-  
-  #go:before,
-  #go:after {
-    position: absolute;
-    content: "";
-    width: 150%;
-    left: 50%;
-    height: 100%;
-    transform: translateX(-50%);
-    z-index: -1000;
-    background-repeat: no-repeat;
-  }
-  
-  #go:hover:before {
-    top: -70%;
-    background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, transparent 20%, var(--main-color) 20%, transparent 30%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%);
-    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-      10% 10%, 18% 18%;
-    background-position: 50% 120%;
-    animation: greentopBubbles 0.6s ease;
-  }
-  
-  @keyframes greentopBubbles {
-    0% {
-      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-        40% 90%, 55% 90%, 70% 90%;
-    }
-  
-    50% {
-      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-        50% 50%, 65% 20%, 90% 30%;
-    }
-  
-    100% {
-      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-        50% 40%, 65% 10%, 90% 20%;
-      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-    }
-  }
-  
-  #go:hover::after {
-    bottom: -70%;
-    background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
-      radial-gradient(circle, var(--main-color) 20%, transparent 20%);
-    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
-    background-position: 50% 0%;
-    animation: greenbottomBubbles 0.6s ease;
-  }
-  
-  @keyframes greenbottomBubbles {
-    0% {
-      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-        70% -10%, 70% 0%;
-    }
-  
-    50% {
-      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-        105% 0%;
-    }
-  
-    100% {
-      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-        110% 10%;
-      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-    }
-  }
+#go {
+  background: rgb(247,150,192);
+  background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+#go span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#go:before,
+#go:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+#go:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+#go:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+#go:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+#go:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+#go:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+#go span:before,
+#go span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+#go span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+#go span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+#go span:hover:before {
+  width: 100%;
+}
+#go span:hover:after {
+  width: 100%;
+}
 
 
 #home{
@@ -161,34 +195,42 @@ h1{
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    padding: 3rem;
 }
 
 #try_guess{
     width: 12rem;
     height: 2.5rem;
-    margin-left: 10rem;
-    margin-top: 2rem;
+    margin-left: 13rem;
+    margin-top: 1rem;
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
+    display: block;
 }
 
 .buttons{
     text-align: center;
     margin-top: 4rem;
     font-size: 1rem;
-}
-
-#submit, #reset{
     border: none;
-    height: 2rem;
+    height: 3rem;
     width: 6rem;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+    margin-left: 12rem;
 }
 
-#reset{
+
+#newGame{
     margin-left: 2rem;
+    width: 10rem;
+}
+
+#response {
+  padding-right: 10px;
 }
 
 footer{

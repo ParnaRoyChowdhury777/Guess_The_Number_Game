@@ -7,3 +7,4 @@ go.addEventListener("click", () => {
     home.style.display = "none";
     game.style.display = "block";   
 });
+

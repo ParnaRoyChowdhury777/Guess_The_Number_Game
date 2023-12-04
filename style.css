@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
 
 :root{
-    --main-color : #0c154e;
+    --main-color : #7d2ae8;
 }
 
 *{
@@ -15,7 +15,7 @@
 }
 
 body{
-    background: linear-gradient(to right, #005aa7, #fffde4); 
+    background-color: #fdfffc; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,7 +24,6 @@ body{
 h1{
     font-weight: 700;
     font-size: 2.5rem;
-    margin-top: 1.8 rem;
 }
 
 .container{
@@ -44,12 +43,11 @@ h1{
 #rounds{
     height: 2rem;
     width: 4rem;
-    border: none;
     border-radius: 10px;
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 #rounds:active, #rounds:focus{
@@ -58,27 +56,97 @@ h1{
 
 #go{
     display: block;
+    transform: translateX(12rem);
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
     border: none;
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-    margin-left: 12rem;
+    color: #fff;
     cursor: pointer;
-    font-size: 2rem;
-    transition: all 1s;
-    background-color: bisque;
-    font-weight: 700;
+    background-color: var(--main-color);
+    transition: all 0.2s ease;
+    font-size: 1.5rem;
 }
 
-#go:hover{
-    box-shadow: 0px 0px 10px red;
-    height: 5rem;
-    width: 5rem;
-    background-color: red;
-    color: whitesmoke;
-    font-weight: 700;
-}
-
+  
+  #go:before,
+  #go:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  #go:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, var(--main-color) 20%, transparent 30%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  #go:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%),
+      radial-gradient(circle, var(--main-color) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
 
 
 #home{
@@ -92,14 +160,15 @@ h1{
 .container h3{
     text-align: center;
     margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
 #try_guess{
     width: 12rem;
     height: 2.5rem;
-    margin-left: 7rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
     text-align: center;
-    border: none;
     border-radius: 10px;
     font-weight: 600;
 }

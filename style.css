@@ -264,6 +264,8 @@ footer a{
   
   .container{
     width: 92%;
+    height: 62rem;
+    margin-top: 19rem;
   }
 
   #try_guess{

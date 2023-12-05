@@ -255,8 +255,7 @@ footer a{
   }
 
   #go{
-    position: relative;
-    right: 4.6rem;
+    transform: translateX(-73px);
   }
 
   #rounds{

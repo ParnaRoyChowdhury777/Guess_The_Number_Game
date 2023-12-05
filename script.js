@@ -1,6 +1,15 @@
+let go = document.getElementById("go");
+let home = document.getElementById("home");
+let game = document.getElementById("game");
+
+go.addEventListener("click", () => {
+    document.getElementById("game_start_audio").play();
+    home.style.display = "none";
+    game.style.display = "block";   
+});
+
 var correctGuess = 0;
 var guessesTaken = 0;
-var maxGuesses = document.getElementById("rounds");
 var gameDone = 0;
 
 var neWGame = function() { 
@@ -11,9 +20,9 @@ var neWGame = function() {
   input_area.innerHTML = "";
   home.style.display = "block";
   game.style.display = "none";
-  maxGuesses.value = null;
 };
 
+neWGame;
 
 var newgame = document.getElementById('newGame');
 newgame.onclick = neWGame;
@@ -43,7 +52,7 @@ function music_stop() {
 var response = function(txtGuess) {
     var answer;
     
-    while (guessesTaken < maxGuesses && gameDone == 0) {
+    while (guessesTaken < Number.parseInt(document.getElementById("rounds").value) && gameDone == 0) {
       if (txtGuess == correctGuess) {
         answer = "Congratulations, you scored" + (100 - guessesTaken) + "points";
       } else if (txtGuess < correctGuess && txtGuess > 0) {
@@ -67,13 +76,13 @@ var response = function(txtGuess) {
   btnSubmit.onclick = function(e) {
   var txtGuess = document.getElementById('try_guess').value;
   var answer = response(txtGuess);
-  var remainingMessage = (maxGuesses - guessesTaken).toString() + " guess(es) remain"; 
+  var remainingMessage = (Number.parseInt(document.getElementById("rounds").value) - guessesTaken).toString() + " guess(es) remain"; 
   var input_area = document.getElementById('input_area');
   if (gameDone == 0) {
     if (answer == "Correct! ") {
       input_area.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
-    } else if (guessesTaken == maxGuesses) {
+    } else if (guessesTaken == Number.parseInt(document.getElementById("rounds").value)) {
       input_area.innerHTML += "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
       gameDone = 1;
     } else {
@@ -86,15 +95,6 @@ var response = function(txtGuess) {
 };
 
 
-let go = document.getElementById("go");
-let home = document.getElementById("home");
-let game = document.getElementById("game");
-
-go.addEventListener("click", () => {
-    document.getElementById("game_start_audio").play();
-    home.style.display = "none";
-    game.style.display = "block";
-});
 
 
 

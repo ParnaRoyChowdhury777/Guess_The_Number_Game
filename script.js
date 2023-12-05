@@ -71,7 +71,7 @@ var response = function(txtGuess) {
       lbl.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
     } else if (guessesTaken == maxGuesses) {
-      lbl.innerHTML += "<p> You lost. New game? </p>";
+      lbl.innerHTML += "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
       gameDone = 1;
     } else {
       lbl.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />";

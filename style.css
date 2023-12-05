@@ -15,7 +15,7 @@
 }
 
 body{
-    background-color: #f2f2f2; 
+    background: #f2f2f2; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +37,6 @@ body{
     box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(0, 0, 0, .25);
     height: 80vh;
     margin-top: 1.5rem;
-    border: 2px solid rgba(118,174,241,1);
 }
 
 #bgm-mute{
@@ -79,16 +78,12 @@ body{
     border: 2px solid green;
 }
 
-#go {
-  margin: 20px;
-}
-#go {
+.btn_bg {
   width: 130px;
   height: 40px;
   color: #fff;
   border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -101,26 +96,24 @@ body{
   outline: none;
   margin-left: 12.5rem;
   margin-top: 2rem;
-}
-
-#go {
   background: rgb(247,150,192);
   background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
   line-height: 42px;
-  padding: 0;
   border: none;
 }
-#go span {
+
+
+.btn_bg span {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-#go:before,
-#go:after {
+
+.btn_bg:before,
+.btn_bg:after {
   position: absolute;
   content: "";
-  height: 0%;
   width: 1px;
  box-shadow:
    -1px -1px 20px 0px rgba(255,255,255,1),
@@ -128,31 +121,32 @@ body{
    7px 7px 20px 0px rgba(0,0,0,.4),
    4px 4px 5px 0px rgba(0,0,0,.3);
 }
-#go:before {
+
+.btn_bg:before {
   right: 0;
   top: 0;
   transition: all 500ms ease;
 }
-#go:after {
+.btn_bg:after {
   left: 0;
   bottom: 0;
   transition: all 500ms ease;
 }
-#go:hover{
+.btn_bg:hover{
   background: transparent;
   color: #76aef1;
   box-shadow: none;
 }
-#go:hover:before {
+.btn_bg:hover:before {
   transition: all 500ms ease;
   height: 100%;
 }
-#go:hover:after {
+.btn_bg:hover:after {
   transition: all 500ms ease;
   height: 100%;
 }
-#go span:before,
-#go span:after {
+.btn_bg span:before,
+.btn_bg span:after {
   position: absolute;
   content: "";
   box-shadow:
@@ -161,24 +155,24 @@ body{
    7px 7px 20px 0px rgba(0,0,0,.4),
    4px 4px 5px 0px rgba(0,0,0,.3);
 }
-#go span:before {
+.btn_bg span:before {
   left: 0;
   top: 0;
   width: 0%;
   height: .5px;
   transition: all 500ms ease;
 }
-#go span:after {
+.btn_bg span:after {
   right: 0;
   bottom: 0;
   width: 0%;
   height: .5px;
   transition: all 500ms ease;
 }
-#go span:hover:before {
+.btn_bg span:hover:before {
   width: 100%;
 }
-#go span:hover:after {
+.btn_bg span:hover:after {
   width: 100%;
 }
 
@@ -207,20 +201,19 @@ body{
     border-radius: 10px;
     font-weight: 600;
     display: block;
+    border: 1px solid rgb(185, 184, 184);
+    font-size: 1rem;
+}
+
+#try_guess:active, #try_guess:focus{
+  border: 1px solid red;
 }
 
 .buttons{
     text-align: center;
     margin-top: 4rem;
-    font-size: 1rem;
-    border: none;
-    height: 3rem;
     width: 6rem;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid black;
-    margin-left: 12rem;
+    margin-left: 10rem;
 }
 
 
@@ -231,6 +224,10 @@ body{
 
 #response {
   padding-right: 10px;
+}
+
+#input_area{
+  padding: 3rem;
 }
 
 footer{

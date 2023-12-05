@@ -256,11 +256,14 @@ footer a{
 
   #go{
     position: relative;
-    right: 5.5rem;
+    right: 4.6rem;
   }
 
   #rounds{
     margin-left: 36%;
   }
   
+  .container{
+    width: 92%;
+  }
 }

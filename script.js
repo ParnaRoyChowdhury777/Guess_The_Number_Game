@@ -1,6 +1,6 @@
 var correctGuess = 0;
 var guessesTaken = 0;
-var maxGuesses = document.getElementById("rounds").value;
+var maxGuesses = (document.getElementById("rounds")).value;
 var gameDone = 0;
 
 var neWGame = function() { 
@@ -11,6 +11,7 @@ var neWGame = function() {
   input_area.innerHTML = "";
   home.style.display = "block";
   game.style.display = "none";
+  maxGuesses,value = "null";
 };
 
 

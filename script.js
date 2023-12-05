@@ -5,7 +5,7 @@ let game = document.getElementById("game");
 go.addEventListener("click", () => {
     document.getElementById("game_start_audio").play();
     home.style.display = "none";
-    game.style.display = "block";   
+    game.style.display = "block"; 
 });
 
 var correctGuess = 0;
@@ -19,10 +19,10 @@ var neWGame = function() {
   correctGuess = Math.floor(Math.random() * 100) + 1;
   input_area.innerHTML = "";
   home.style.display = "block";
-  game.style.display = "none";
+  game.style.display = "none"; 
 };
 
-neWGame;
+neWGame();
 
 var newgame = document.getElementById('newGame');
 newgame.onclick = neWGame;
@@ -83,16 +83,19 @@ var response = function(txtGuess) {
       input_area.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
     } else if (guessesTaken == Number.parseInt(document.getElementById("rounds").value)) {
-      input_area.innerHTML += "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
+      input_area.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />" + "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
       gameDone = 1;
+      
     } else {
-      input_area.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />";
+      input_area.innerHTML += "<span id='response'> " + txtGuess + " </span>" + answer + remainingMessage + "<br />";
     }
   }
-  var txtGuess = document.getElementById('guess');
+  var txtGuess = document.getElementById('try_guess');
   txtGuess.value = null;
   return false;
 };
+
+
 
 
 

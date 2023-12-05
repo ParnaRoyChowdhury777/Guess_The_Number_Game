@@ -187,7 +187,6 @@ body{
 
 .container h3{
     text-align: center;
-    margin-bottom: 1.5rem;
     font-size: 2rem;
     padding: 3rem;
 }
@@ -196,7 +195,6 @@ body{
     width: 12rem;
     height: 2.5rem;
     margin-left: 13rem;
-    margin-top: 1rem;
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
@@ -211,7 +209,6 @@ body{
 
 .buttons{
     text-align: center;
-    margin-top: 4rem;
     width: 6rem;
     margin-left: 10rem;
 }
@@ -222,13 +219,11 @@ body{
     width: 10rem;
 }
 
-#response {
-  padding-right: 10px;
+#input_area {
+  padding: 2rem;
+  text-align: center;
 }
 
-#input_area{
-  padding: 2rem;
-}
 
 footer{
     position: fixed;
@@ -244,3 +239,5 @@ footer a{
     text-decoration: none;
     color: var(--main-color);
 }
+
+

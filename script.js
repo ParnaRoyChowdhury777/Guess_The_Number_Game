@@ -79,7 +79,7 @@ var response = function(txtGuess) {
   var remainingMessage = ((document.getElementById("rounds").value) - guessesTaken).toString() + " guess(es) remain"; 
   var input_area = document.getElementById('input_area');
   if (gameDone == 0) {
-    if (answer == "Correct! ") {
+    if (answer == "Congratulations, you scored " + (100 - guessesTaken) + " points  ") {
       input_area.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
     } else if (guessesTaken == document.getElementById("rounds").value) {

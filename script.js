@@ -16,13 +16,13 @@ var neWGame = function() {
   var lbl = document.getElementById('try_guess');
   lbl.value = null;
   guessesTaken = 0;
-  correctGuess = Math.floor(Math.random() * 100) + 1;
   input_area.innerHTML = "";
   home.style.display = "block";
   game.style.display = "none"; 
+  document.getElementById("rounds").value = null
 };
 
-neWGame();
+correctGuess = Math.floor(Math.random() * 100) + 1;
 
 var newgame = document.getElementById('newGame');
 newgame.onclick = neWGame;

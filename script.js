@@ -19,7 +19,7 @@ var neWGame = function() {
   input_area.innerHTML = "";
   home.style.display = "block";
   game.style.display = "none"; 
-  document.getElementById("rounds").value = null
+  document.getElementById("rounds").value = null;
 };
 
 correctGuess = Math.floor(Math.random() * 100) + 1;

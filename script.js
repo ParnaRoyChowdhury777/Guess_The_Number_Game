@@ -5,12 +5,14 @@ var gameDone = 0;
 
 var neWGame = function() { 
   var lbl = document.getElementById('try_guess');
-  lbl.innerHTML = " ";
+  lbl.value = null;
   guessesTaken = 0;
-  correctGuess = Math.floor((Math.random() * 100)+1);
+  correctGuess = Math.floor(Math.random() * 100) + 1;
+  input_area.innerHTML = "";
+  home.style.display = "block";
+  game.style.display = "none";
 };
 
-neWGame();
 
 var newgame = document.getElementById('newGame');
 newgame.onclick = neWGame;
@@ -42,7 +44,7 @@ var response = function(txtGuess) {
     
     while (guessesTaken < maxGuesses && gameDone == 0) {
       if (txtGuess == correctGuess) {
-        answer = "Congratulations, you scored $(100 - guessesTaken) points ";
+        answer = "Congratulations, you scored" + (100 - guessesTaken) + "points";
       } else if (txtGuess < correctGuess && txtGuess > 0) {
         answer = "Too less, try a bigger value ";
       } else if (txtGuess > correctGuess && txtGuess < 101) {
@@ -65,16 +67,16 @@ var response = function(txtGuess) {
   var txtGuess = document.getElementById('try_guess').value;
   var answer = response(txtGuess);
   var remainingMessage = (maxGuesses - guessesTaken).toString() + " guess(es) remain"; 
-  var lbl = document.getElementById('input_area');
+  var input_area = document.getElementById('input_area');
   if (gameDone == 0) {
     if (answer == "Correct! ") {
-      lbl.innerHTML += answer + "<p> Play again </p>";
+      input_area.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
     } else if (guessesTaken == maxGuesses) {
-      lbl.innerHTML += "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
+      input_area.innerHTML += "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
       gameDone = 1;
     } else {
-      lbl.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />";
+      input_area.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />";
     }
   }
   var txtGuess = document.getElementById('guess');

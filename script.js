@@ -52,7 +52,7 @@ function music_stop() {
 var response = function(txtGuess) {
     var answer;
     
-    while (guessesTaken < Number.parseInt(document.getElementById("rounds").value) && gameDone == 0) {
+    while (guessesTaken < document.getElementById("rounds").value && gameDone == 0) {
       if (txtGuess == correctGuess) {
         answer = "Congratulations, you scored" + (100 - guessesTaken) + "points";
       } else if (txtGuess < correctGuess && txtGuess > 0) {
@@ -76,13 +76,13 @@ var response = function(txtGuess) {
   btnSubmit.onclick = function(e) {
   var txtGuess = document.getElementById('try_guess').value;
   var answer = response(txtGuess);
-  var remainingMessage = (Number.parseInt(document.getElementById("rounds").value) - guessesTaken).toString() + " guess(es) remain"; 
+  var remainingMessage = ((document.getElementById("rounds").value) - guessesTaken).toString() + " guess(es) remain"; 
   var input_area = document.getElementById('input_area');
   if (gameDone == 0) {
     if (answer == "Correct! ") {
       input_area.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
-    } else if (guessesTaken == Number.parseInt(document.getElementById("rounds").value)) {
+    } else if (guessesTaken == document.getElementById("rounds").value) {
       input_area.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />" + "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
       gameDone = 1;
       

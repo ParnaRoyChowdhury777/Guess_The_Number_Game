@@ -19,6 +19,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    max-height: 100vh;
 }
 
 .heading{
@@ -242,3 +243,20 @@ footer a{
 }
 
 
+/*Responsive Design*/
+@media (max-width: 768px) {
+  #round_text{
+    padding-top: 4rem;
+    font-size: 1.6rem;
+  }
+
+  #go{
+    position: relative;
+    right: 5.5rem;
+  }
+
+  #rounds{
+    margin-left: 36%;
+  }
+  
+}

@@ -196,7 +196,7 @@ body{
 #try_guess{
     width: 12rem;
     height: 2.5rem;
-    margin-left: 13rem;
+    margin-left: 12.5rem;
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
@@ -264,5 +264,13 @@ footer a{
   
   .container{
     width: 92%;
+  }
+
+  #try_guess{
+    margin-left: 5rem;
+  }
+
+  #submit{
+    margin-left: 2rem;
   }
 }

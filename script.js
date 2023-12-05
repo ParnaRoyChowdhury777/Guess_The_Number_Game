@@ -83,7 +83,7 @@ var response = function(txtGuess) {
       input_area.innerHTML += answer + "<p> Play again </p>";
       gameDone = 1;
     } else if (guessesTaken == document.getElementById("rounds").value) {
-      input_area.innerHTML += "<span id='response'>" + txtGuess + "</span>" + answer + remainingMessage + "<br />" + "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
+      input_area.innerHTML += "<span id='response'>" + txtGuess + "</span>" + " " + answer + remainingMessage + "<br />" + "<p> You lost. Correct number was " + correctGuess + "<br> New game? </p>";
       gameDone = 1;
       
     } else {

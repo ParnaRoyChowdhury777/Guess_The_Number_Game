@@ -54,7 +54,7 @@ var response = function(txtGuess) {
     
     while (guessesTaken < document.getElementById("rounds").value && gameDone == 0) {
       if (txtGuess == correctGuess) {
-        answer = "Congratulations, you scored" + (100 - guessesTaken) + "points";
+        answer = "Congratulations, you scored " + (100 - guessesTaken) + " points  ";
       } else if (txtGuess < correctGuess && txtGuess > 0) {
         answer = "Too less, try a bigger value ";
       } else if (txtGuess > correctGuess && txtGuess < 101) {

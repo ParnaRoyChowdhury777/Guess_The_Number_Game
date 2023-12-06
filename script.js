@@ -71,7 +71,7 @@ var neWGame = function() {
 
 // Function to generate a random number based on maxRoundElement
 function generateRandomNumber() {
-  return Math.floor(Math.random() * Number.parseInt(maxRoundElement.innerText)) + 1;
+  return Math.floor(Math.random() * Number.parseInt(maxRoundElement.textContent)) + 1;
 }
 
 // Call neWGame directly to ensure game initialization on page load

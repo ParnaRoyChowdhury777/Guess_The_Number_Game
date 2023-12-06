@@ -105,7 +105,6 @@ var response = function(txtGuess) {
 };
 
 
-
 var btnSubmit = document.getElementById('submit');
 btnSubmit.onclick = function(e) {
     var txtGuess = document.getElementById('try_guess').value;

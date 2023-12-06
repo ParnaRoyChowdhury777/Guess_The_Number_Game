@@ -18,13 +18,17 @@
         <button class="bgm" id="bgm-play"><i class='bx bxs-volume-full' style="color: var(--main-color);"></i></button>
         <button class="bgm" id="bgm-mute"><i class='bx bxs-volume-mute' style="color: var(--main-color);"></i></button>
         <div id="home">
-            <audio src="game_start.mp3" id="game_start_audio"></audio>
             <p id="round_text">Choose the number of rounds</p>
-            <input type="number" name="rounds" id="rounds" placeholder="Rounds" max="7" min="3">
+            <!-- <input type="number" name="rounds" id="rounds" placeholder="Rounds" max="7" min="3"> -->
+            <select name="rounds" id="rounds">
+                <option value="3">Easy (3 rounds)</option>
+                <option value="5">Intermediate (5 rounds)</option>
+                <option value="7">Hard (7 rounds)</option>
+            </select>
             <button type="submit" id="go" class="btn_bg"><span>START</span></button>
         </div>
         <div id="game">
-            <h3>Guess a number between <span style="color: red;">1</span> and <span style="color: red;">100</span></h3>
+            <h3>Guess a number between <span style="color: red;">1</span> and <span style="color: red;" id="max_round"></span></h3>
             <input type="text" name="text" id="try_guess" placeholder="Enter here">
             <button type="submit" id="submit" class="buttons btn_bg"><span>Guess</span></button>
             <button id="newGame" class="buttons btn_bg"><span>New Game</span></button>

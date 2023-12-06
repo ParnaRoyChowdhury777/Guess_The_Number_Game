@@ -136,7 +136,7 @@ body{
   transition: all 500ms ease;
 }
 .btn_bg:hover{
-  background: transparent;
+  background: pink;
   color: #76aef1;
   box-shadow: none;
 }

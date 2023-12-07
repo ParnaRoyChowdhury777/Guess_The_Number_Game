@@ -34,3 +34,17 @@ Contributions are welcome! If you find any bugs or want to add new features, ple
 3. Commit your changes (git commit -m 'Add some feature').
 4. Push to the branch (git push origin feature/your-feature-name).
 5. Open a pull request
+
+## License
+[MIT License © Parna Roy Chowdhury](https://github.com/ParnaRoyChowdhury777/ESCS291-C-CODES/blob/c8fe11258d5daebde2afe6a2579a8bb012edea56/License)
+
+
+## Where to contact ?
+Contact: [parnaroychowdhury2020@gmail.com]
+
+## 🙋‍♂️ Support
+
+💙 If you like this project, give it a ⭐ and share it with friends!<br><br>
+
+
+Made with ❤️ by Parna Roy Chowdhury<br><br>

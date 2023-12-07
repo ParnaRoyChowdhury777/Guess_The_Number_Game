@@ -1,9 +1,9 @@
-# Guess_The_Number_Game 🔢
+# 🔢 Guess_The_Number_Game 
 Welcome to the "Guess the Number" game! Test your guessing skills and see if you can guess the correct number. 
 
 This is a simple web-based game which allows users to guess a randomly generated number within a specified range as chosen by the user himself (based on difficulty level).
 
-## Game Rules 🎮 
+## 🎮 Game Rules  
 
 - The computer selects a random number between 1 and 10 (easy level), 50 (intermediate level) and 100 (hard level).
 - The player has 3 (easy) / 5 (intermediate) / 7 (hard) chances to guess the correct number.
@@ -11,7 +11,7 @@ This is a simple web-based game which allows users to guess a randomly generated
 - If the player guesses the correct number within the given chances, he wins the game.
 - If the player runs out of chances without guessing correctly, the game ends, and the correct number is revealed.
 
-## Features 📋
+## 🧷 Features 
 
 - Interactive and user-friendly interface.
 - Randomly generated number for each game.
@@ -19,13 +19,13 @@ This is a simple web-based game which allows users to guess a randomly generated
 - Keep track of the number of attempts.
 - If the player wins, he receives a score out of 100 based on the number of attempts.
 
-## Technologies Used 💻
+## 💻 Technologies Used 
 
 - HTML
 - CSS
 - Vanilla JavaScript
 
-## Contributions 🤝
+## 🤝 Contributions 
 
 Contributions are welcome! If you find any bugs or want to add new features, please open an issue or submit a pull request.
 
@@ -35,11 +35,11 @@ Contributions are welcome! If you find any bugs or want to add new features, ple
 4. Push to the branch (git push origin feature/your-feature-name).
 5. Open a pull request
 
-## License
+## 📃 License
 [MIT License © Parna Roy Chowdhury](https://github.com/ParnaRoyChowdhury777/Guess_The_Number_Game/blob/5f754d4d7b7928b3db5e744e5d185179f6eb4bbf/LICENSE)
 
 
-## Where to contact ?
+## 📫 Where to contact ?
 Contact: [parnaroychowdhury2020@gmail.com]
 
 ## 🙋‍♂️ Support

@@ -41,7 +41,7 @@ body{
     height: auto;
     width: auto;
     padding-bottom: 1.5rem;
-    bottom: 200px;
+    bottom: 0;
 }
 
 #bgm-mute{

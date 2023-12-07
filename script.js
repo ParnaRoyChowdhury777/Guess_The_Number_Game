@@ -130,4 +130,3 @@ btnSubmit.onclick = function(e) {
 // Update newGame button to call neWGame
 var newGameButton = document.getElementById('newGame');
 newGameButton.onclick = neWGame;
-neWGame();

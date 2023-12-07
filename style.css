@@ -246,9 +246,6 @@ footer a{
 
 /*Responsive Design*/
 @media (max-width: 768px) {
-  #heading{
-    margin-bottom: 2rem;
-  }
 
   #round_text{
     padding-top: 4rem;

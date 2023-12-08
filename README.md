@@ -13,11 +13,28 @@ This is a simple web-based game which allows users to guess a randomly generated
 
 ## 🧷 Features 
 
-- Interactive and user-friendly interface.
+- Interactive, responsive and user-friendly interface.
 - Randomly generated number for each game.
 - Provide feedback on whether the guess is too high, too low, or correct.
 - Keep track of the number of attempts.
 - If the player wins, he receives a score out of 100 based on the number of attempts.
+
+## 🏁 Getting Started
+
+Follow these instructions to set up the project on your local machine:
+### Prerequisites
+Make sure you have the following installed:
+  - Git 
+  - A web browser (e.g., Chrome, Firefox)
+### Installation
+  - Clone the repository to your local machine :
+           ``` git clone https://github.com/your-username/guess-the-number.git ```
+  - Navigate to the project directory:
+           ``` cd Guess_The_Number_Game ```
+  - Open the `index.html` file in your preferred web browser.
+  - Guess the correct number within the given range. The game will provide hints to guide you.
+  - Have fun playing!
+
 
 ## 💻 Technologies Used 
 

@@ -32,7 +32,6 @@ Make sure you have the following installed:
   - Navigate to the project directory:
            ``` cd Guess_The_Number_Game ```
   - Open the `index.html` file in your preferred web browser.
-  - Guess the correct number within the given range. The game will provide hints to guide you.
   - Have fun playing!
 
 

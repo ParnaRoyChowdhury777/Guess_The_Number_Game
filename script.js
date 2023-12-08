@@ -90,7 +90,7 @@ var response = function(txtGuess) {
       } else if (txtGuess > correctGuess && txtGuess < (Number.parseInt(maxRoundElement.innerText) + 1)) {
           answer = "Too Higher, Enter a lower number ";
       } else {
-          answer = "Enter a number, ";
+          answer = "Input no. out of range, Enter a number within range, ";
           // Remove the return statement here
           return answer;
       }

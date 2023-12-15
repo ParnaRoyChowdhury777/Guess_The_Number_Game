@@ -23,6 +23,7 @@ function updateMaxRound() {
 // Add event listener for the "change" event on the select element
 roundsSelect.addEventListener("change", function() {
   updateMaxRound();
+  correctGuess = generateRandomNumber();
 });
 
 // Call updateMaxRound directly to ensure max_round initialization on page load

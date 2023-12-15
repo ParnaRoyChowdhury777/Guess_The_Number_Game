@@ -9,7 +9,7 @@ This is a simple web-based game which allows users to guess a randomly generated
 - The player has 3 (easy) / 5 (intermediate) / 7 (hard) chances to guess the correct number.
 - After each guess, the player receives feedback on whether his guess is too high, too low, or correct.
 - If the player guesses the correct number within the given number of chances, he wins the game.
-- If the player runs out of chances without guessing correctly, the game ends, and the correct number is revealed.
+- If the player runs out of chances without guessing correctly, the game ends and the correct number is revealed.
 
 ## 🧷 Features 
 

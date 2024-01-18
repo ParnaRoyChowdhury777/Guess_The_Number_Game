@@ -53,6 +53,7 @@ Contributions are welcome! If you find any bugs or want to add new features, ple
 5. Open a pull request
 
 ## 📃 License
+
 [MIT License © Parna Roy Chowdhury](https://github.com/ParnaRoyChowdhury777/Guess_The_Number_Game/blob/5f754d4d7b7928b3db5e744e5d185179f6eb4bbf/LICENSE)
 
 

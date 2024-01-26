@@ -1,6 +1,6 @@
 # Guess_The_Number_Game 🔢
 
-Welcome to the "Guess the Number" game! Test your guessing skills and see if you can guess the correct number. 
+Welcome to the "Guess The Number" game! Test your guessing skills and see if you can guess the correct number. 
 
 This is a simple web-based game which allows users to guess a randomly generated number within a specified range as chosen by the user himself (based on the difficulty level).
 
